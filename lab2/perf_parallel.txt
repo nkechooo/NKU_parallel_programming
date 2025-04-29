@@ -1,0 +1,239 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 4  of event 'task-clock:ppp'
+# Event count (approx.): 1000000
+#
+# Children      Self  Command  Shared Object         Symbol                               
+# ........  ........  .......  ....................  .....................................
+#
+    50.00%     0.00%  sh       ld-linux-x86-64.so.2  [.] 0x00007fca759b3b08
+            |
+            ---0x7fca759b3b08
+               |          
+               |--25.00%--0x7fca759b34bf
+               |          0x7fca759b6c8e
+               |          0x7fca759a5158
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          
+                --25.00%--0x7fca759ad04f
+
+    25.00%    25.00%  sh       [kernel.kallsyms]     [k] __d_lookup_rcu
+            |
+            ---0xb40eba1f0e8040
+               fstatat64
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __do_sys_newfstatat
+               vfs_fstatat
+               vfs_statx
+               filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       [unknown]             [k] 0x00b40eba1f0e8040
+            |
+            ---0xb40eba1f0e8040
+               fstatat64
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __do_sys_newfstatat
+               vfs_fstatat
+               vfs_statx
+               filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       libc.so.6             [.] fstatat64
+            |
+            ---fstatat64
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __do_sys_newfstatat
+               vfs_fstatat
+               vfs_statx
+               filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __do_sys_newfstatat
+               vfs_fstatat
+               vfs_statx
+               filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] do_syscall_64
+            |
+            ---do_syscall_64
+               __do_sys_newfstatat
+               vfs_fstatat
+               vfs_statx
+               filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] __do_sys_newfstatat
+            |
+            ---__do_sys_newfstatat
+               vfs_fstatat
+               vfs_statx
+               filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] vfs_fstatat
+            |
+            ---vfs_fstatat
+               vfs_statx
+               filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%    25.00%  sh       [kernel.kallsyms]     [k] do_user_addr_fault
+            |
+            ---0x7fca759b3b08
+               0x7fca759b34bf
+               0x7fca759b6c8e
+               0x7fca759a5158
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] vfs_statx
+            |
+            ---vfs_statx
+               filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] filename_lookup
+            |
+            ---filename_lookup
+               path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       ld-linux-x86-64.so.2  [.] 0x00007fca759b34bf
+            |
+            ---0x7fca759b34bf
+               0x7fca759b6c8e
+               0x7fca759a5158
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] path_lookupat
+            |
+            ---path_lookupat
+               link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       ld-linux-x86-64.so.2  [.] 0x00007fca759b6c8e
+            |
+            ---0x7fca759b6c8e
+               0x7fca759a5158
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] link_path_walk.part.0.constprop.0
+            |
+            ---link_path_walk.part.0.constprop.0
+               walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       ld-linux-x86-64.so.2  [.] 0x00007fca759a5158
+            |
+            ---0x7fca759a5158
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] walk_component
+            |
+            ---walk_component
+               lookup_fast
+               __d_lookup_rcu
+
+    25.00%    25.00%  sh       ld-linux-x86-64.so.2  [.] 0x0000000000014ef4
+            |
+            ---0
+               0x7fca759acef4
+
+    25.00%    25.00%  sh       ld-linux-x86-64.so.2  [.] 0x000000000001504f
+            |
+            ---0x7fca759b3b08
+               0x7fca759ad04f
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] exc_page_fault
+            |
+            ---exc_page_fault
+               do_user_addr_fault
+
+    25.00%     0.00%  sh       [kernel.kallsyms]     [k] lookup_fast
+            |
+            ---lookup_fast
+               __d_lookup_rcu
+
+    25.00%     0.00%  sh       [unknown]             [.] 0000000000000000
+            |
+            ---0
+               0x7fca759acef4
+
+    25.00%     0.00%  sh       ld-linux-x86-64.so.2  [.] 0x00007fca759acef4
+            |
+            ---0x7fca759acef4
+
+    25.00%     0.00%  sh       ld-linux-x86-64.so.2  [.] 0x00007fca759ad04f
+            |
+            ---0x7fca759ad04f
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
